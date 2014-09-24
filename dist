@@ -1,0 +1,1 @@
+var a="teste",a="teste",b="testando";jQuery(document).ready(function(){function a(){jQuery("body").click(function(){console.log("teste")})}a()});var b="testando";jQuery(document).ready(function(){function a(){jQuery("body").click(function(){console.log("teste")})}a()});
