@@ -16,7 +16,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('WP_ENV', 'production');
+define('WP_ENV', 'development');
 include 'wp-config-env.php';
 
 /**#@+
