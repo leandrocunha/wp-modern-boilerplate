@@ -1,92 +1,56 @@
 module.exports = function(grunt) {
 
-	//load modules
-	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks("grunt-contrib-concat");
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
+  // Load plugins
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
+  // Project configuration.
+  grunt.initConfig({
+    
+    pkg: grunt.file.readJSON('package.json'),
+    
+    sass: {
+      options: {
+        banner: '/*\n' +
+                'Theme Name: WP Modern Boilerplate\n' +
+                'Theme URI: https://github.com/leandrocunha/wp-modern-boilerplate\n' +
+                'Author: Leandro Cunha aka. Frango\n' +
+                'Author URI: http://frango.herokuapp.com\n' +
+                'Description: The modern boilerplate to build WordPress themes more powerfull\n' +
+                'Version: 1.0\n' +
+                'License: GNU General Public License v2 or later\n' +
+                'License URI: http://www.gnu.org/licenses/gpl-2.0.html\n' +
+                'Tags: gray, blue, white, flat, bootstrap, grunt, bower\n' +
+                'Text Domain: wpmodernboilerplate\n' +
+                '\n' +
+                'This theme, like WordPress, is licensed under the GPL.\n' +
+                'Use it to make something cool, have fun, and share what you\'ve learned with others.\n' +
+                '*/',
+      },
 
-	//load javascript files
-	var theme_folder = 'twentyfourteen-child';
-		jsfiles = [
-					'wp-content/themes/' + theme_folder + '/js/lib/Bootstrap/*.js',
-					'wp-content/themes/' + theme_folder + '/js/lib/SiriWave/*.js',
-				   	'wp-content/themes/' + theme_folder + '/js/lib/*.js'
-		      	   ];
+      dist: {
+        files: {
+          'style.css': 'sass/app.scss'
+        }
+      }
+    },
 
-	//config tasks
- 	grunt.initConfig({
+    copy: {
+      main: {
+        files: [
+          {
+            expand: true,
+            cwd: 'bower_components/holderjs/',
+            src: ['holder.js'],
+            dest: 'js/holderjs/'
+          }
+        ]
+      },
+    }
 
- 		jshint: {
- 			options: {
- 				asi			: true,
- 				laxbreak	: true,
- 				'-W041'		: false,
- 				'-W030'		: false
- 			},
+  });
 
- 			beforeconcat: jsfiles,
- 		},
+  // Default task(s).
+  grunt.registerTask('default', ['sass', 'copy']);
 
-     	concat: {
-		    dist: {
-		      src: jsfiles,
-		      dest: 'wp-content/themes/twentyfourteen-child/js/app.js',
-		    }
-      	},
-
-      	uglify: {
-      		dist: {
-	            src: "wp-content/themes/twentyfourteen-child/js/app.js",
-            	dest: "wp-content/themes/twentyfourteen-child/js/app.min.js"
-      		}
-      	},
-
-		sass: {
-			dev: {
-				options: {
-					style: 'expanded'
-				},
-
-				files: {
-					'wp-content/themes/twentyfourteen-child/css/app.css': 'wp-content/themes/twentyfourteen-child/scss/app.scss'
-				},
-
-				require: 'Bootstrap'
-			}
-		},
-
-		cssmin: {
-  			minify: {
-		        files: {
-		          'wp-content/themes/twentyfourteen-child/css/app.min.css': 'wp-content/themes/twentyfourteen-child/css/app.css'
-		        }
-  			}
-		},
-
-		watch: {
-			css: {
-			    files: 'wp-content/themes/twentyfourteen-child/scss/*.scss',
-			    tasks: ['sass'],
-			    options: {
-			      livereload: true,
-			    },
-			},
-
-			theme: {
-			    files: 'wp-content/themes/twentyfourteen-child/*.php',
-			    options: {
-			      livereload: true,
-			    },
-			}
-		}
-  	});
-
- 	// register tasks
-  	grunt.registerTask("default", ['jshint', 'concat', 'sass', 'watch']);
-
-  	grunt.registerTask('build', ['cssmin', 'uglify']);
 };

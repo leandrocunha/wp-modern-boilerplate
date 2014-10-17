@@ -1,14 +1,13 @@
 {
-  "name": "wplab",
+  "name": "wp-modern-boilerplate",
   "version": "0.0.1",
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-concat": "^0.5.0",
-    "grunt-contrib-cssmin": "^0.10.0",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-nodeunit": "~0.4.1",
-    "grunt-contrib-sass": "^0.8.1",
-    "grunt-contrib-uglify": "^0.6.0",
-    "grunt-contrib-watch": "^0.6.1"
+  "description": "The modern boilerplate to build WordPress themes more powerfull",
+  "repository": "https://github.com/leandrocunha/wp-modern-boilerplate",
+  "author": "Leandro Cunha aka. Frango",
+  "license": "GPL",
+  "dependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-sass": "~0.8.1",
+    "grunt-contrib-copy": "~0.7.0"
   }
 }

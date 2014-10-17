@@ -1,0 +1,22 @@
+{
+  "name": "wp-modern-boilerplate",
+  "version": "0.0.1",
+  "homepage": "https://github.com/leandrocunha/wp-modern-boilerplate",
+  "authors": [
+    "Leandro Cunha aka. Frango <leandroscunha@gmail.com>"
+  ],
+  "description": "The modern boilerplate to build WordPress themes more powerfull",
+  "license": "GPL",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.2.0+2",
+    "holderjs": "~2.4.0"
+  }
+}

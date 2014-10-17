@@ -1,0 +1,31 @@
+// Import BS core
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+
+// Fix admin bar menu
+body.admin-bar {
+	top: 32px;
+}
+
+// Header
+#header {
+	.navbar {
+		margin: 0;
+	}
+}
+
+// Slider
+#slider {
+	.slides {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+// Footer
+#footer {
+	background-color: #f8f8f8;
+	border-top: #e7e7e7 1px solid;
+	margin: 150px 0 0 0;
+	padding: 30px 0;
+}
