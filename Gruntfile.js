@@ -3,6 +3,7 @@ module.exports = function(grunt) {
   // Load plugins
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Project configuration.
   grunt.initConfig({
@@ -42,15 +43,28 @@ module.exports = function(grunt) {
             expand: true,
             cwd: 'bower_components/holderjs/',
             src: ['holder.js'],
-            dest: 'js/holderjs/'
+            dest: 'resources/holderjs/'
+          },
+          {
+            expand: true,
+            cwd: 'bower_components/owlcarousel/owl-carousel/',
+            src: ['*'],
+            dest: 'resources/owlcarousel'
           }
         ]
+      },
+    },
+
+    watch: {
+      scripts: {
+        files: ['sass/*.scss'],
+        tasks: ['sass']
       },
     }
 
   });
 
   // Default task(s).
-  grunt.registerTask('default', ['sass', 'copy']);
+  grunt.registerTask('default', ['sass', 'copy', 'watch']);
 
 };

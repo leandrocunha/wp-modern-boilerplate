@@ -1,6 +1,17 @@
 // Import BS core
 @import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
 
+// Import Fonts
+@import "http://fonts.googleapis.com/css?family=Quicksand:300,400,700";
+
+
+
+// GLOBALS
+body {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400;
+}
+
 // Fix admin bar menu
 body.admin-bar {
 	top: 32px;
@@ -28,4 +39,8 @@ body.admin-bar {
 	border-top: #e7e7e7 1px solid;
 	margin: 150px 0 0 0;
 	padding: 30px 0;
+
+	.brand-footer {
+		margin: 0;
+	}
 }
