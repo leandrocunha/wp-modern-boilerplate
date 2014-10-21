@@ -18,38 +18,6 @@
 
         <div class="what-we-do">
             <?php get_template_part( 'services', 'carousel' ); ?>
-
-
-<!--             <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="page-header">
-                            <h2>What we do?</h2>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/100%x150">
-                        </div>
-                        <h3>WordPress Themes</h3>
-                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/100%x150">
-                        </div>
-                        <h3>WooCommerce Customization</h3>
-                        <p>Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/100%x150">
-                        </div>
-                        <h3>Wonderful Websites</h3>
-                        <p>Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
-                    </div>
-                </div>
-            </div> -->
         </div>
 
         <div class="about">
@@ -68,55 +36,7 @@
         </div>
 
         <div class="portfolio">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="page-header">
-                            <h2>Portfólio</h2>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/100%x250">
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/100%x250">
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/100%x250">
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/100%x250">
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/100%x250">
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/100%x250">
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/100%x250">
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/100%x250">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php get_template_part( 'portfolio', 'features' ); ?>
         </div>
 
         <div class="contact-us">

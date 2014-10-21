@@ -1,11 +1,12 @@
 <?php
 
 	// Theme support
-	add_theme_support( 'post-thumbnails', array( 'services' ) );
+	add_theme_support( 'post-thumbnails', array( 'services', 'portfolio' ) );
 
 
 	// Setup thumbnail sizes
 	add_image_size( '350x150', 350, 150, true );
+	add_image_size( '250x250', 250, 250, true );
 
 
 	// Load assets
@@ -42,4 +43,23 @@
 	}
 
  	add_action('init', 'post_type_services');
+
+	function post_type_portfolio() {
+		$labels = array(
+			'name' => _x('Portfolio', 'post type general name'),
+			'singular_name' => _x('Project', 'post type singular name')
+		);
+
+		$args = array(
+			'labels' => $labels,
+			'public' => true,
+			//'register_meta_box_cb' => 'services_meta_box',
+			'supports' => array('title','editor','thumbnail')
+          );
+
+		register_post_type( 'portfolio' , $args );
+		flush_rewrite_rules();
+	}
+
+	add_action('init', 'post_type_portfolio');
 ?>
