@@ -6,9 +6,9 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    
+
     pkg: grunt.file.readJSON('package.json'),
-    
+
     sass: {
       options: {
         banner: '/*\n' +
@@ -43,6 +43,12 @@ module.exports = function(grunt) {
             cwd: 'bower_components/holderjs/',
             src: ['holder.js'],
             dest: 'js/holderjs/'
+          },
+          {
+            expand: true,
+            cwd: 'bower_components/jquery.nicescroll/',
+            src: ['jquery.nicescroll.js'],
+            dest: 'js/jquery.nicescroll/'
           }
         ]
       },
