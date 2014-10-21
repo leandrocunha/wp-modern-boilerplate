@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-        
+
     <section id="slider">
         <ul class="slides owl-carousel" id="owl-carousel">
             <li class="slide">
@@ -9,44 +9,47 @@
                 <img data-src="holder.js/100%x350/vine">
             </li>
             <li class="slide">
-                <img data-src="holder.js/100%x350/lava">   
+                <img data-src="holder.js/100%x350/lava">
             </li>
-        </ul> 
+        </ul>
     </section>
 
     <section id="content">
 
         <div class="what-we-do">
-            <div class="container">
+            <?php get_template_part( 'services', 'carousel' ); ?>
+
+
+<!--             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="page-header">
                             <h2>What we do?</h2>
                         </div>
-                    </div>                
+                    </div>
                     <div class="col-md-4">
                         <div class="thumbnail">
                             <img data-src="holder.js/100%x150">
                         </div>
                         <h3>WordPress Themes</h3>
-                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis.</p> 
+                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis.</p>
                     </div>
                     <div class="col-md-4">
                         <div class="thumbnail">
                             <img data-src="holder.js/100%x150">
                         </div>
                         <h3>WooCommerce Customization</h3>
-                        <p>Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis.</p> 
+                        <p>Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis.</p>
                     </div>
                     <div class="col-md-4">
                         <div class="thumbnail">
                             <img data-src="holder.js/100%x150">
                         </div>
                         <h3>Wonderful Websites</h3>
-                        <p>Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p> 
+                        <p>Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <div class="about">
@@ -59,7 +62,7 @@
                         <div class="content-section">
                             <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
                         </div>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>
