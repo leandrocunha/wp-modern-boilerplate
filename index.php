@@ -1,17 +1,7 @@
 <?php get_header(); ?>
 
     <section id="slider">
-        <ul class="slides owl-carousel" id="owl-carousel">
-            <li class="slide">
-                <img data-src="holder.js/100%x350/sky">
-            </li>
-            <li class="slide">
-                <img data-src="holder.js/100%x350/vine">
-            </li>
-            <li class="slide">
-                <img data-src="holder.js/100%x350/lava">
-            </li>
-        </ul>
+        <?php get_template_part('slides'); ?>
     </section>
 
     <section id="content">

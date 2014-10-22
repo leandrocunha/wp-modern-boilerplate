@@ -1,7 +1,7 @@
 <?php
 
 	// Theme support
-	add_theme_support( 'post-thumbnails', array( 'services', 'portfolio' ) );
+	add_theme_support( 'post-thumbnails', array( 'services', 'portfolio', 'slides' ) );
 
 
 	// Setup thumbnail sizes
@@ -25,6 +25,24 @@
 
 
 	// Build Custom Posts Type
+	function post_type_slides() {
+		$labels = array(
+			'name' => _x('Slides', 'post type general name'),
+			'singular_name' => _x('Slide', 'post type singular name')
+		);
+
+		$args = array(
+			'labels' => $labels,
+			'public' => true,
+			'supports' => array('title', 'thumbnail')
+          );
+
+		register_post_type( 'slides' , $args );
+		flush_rewrite_rules();
+	}
+
+ 	add_action('init', 'post_type_slides');
+
 	function post_type_services() {
 		$labels = array(
 			'name' => _x('Services', 'post type general name'),
