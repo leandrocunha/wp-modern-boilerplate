@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="page-header">
-                <h2>Portfólio</h2>
+                <h2 class="portfolio-scroll">Portfólio</h2>
             </div>
         </div>
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>

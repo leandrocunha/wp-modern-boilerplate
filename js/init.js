@@ -14,4 +14,18 @@ jQuery(document).ready(function($){
 
   	$('.fill-box').fillBox();
 
+
+  	$('.navbar-nav li > a').click(function(e){
+
+  		e.preventDefault();
+
+  		var me = $(this),
+  			target = me.data('scroll');
+
+  		if( target === "home"){
+  			$.scrollTo( 0, 900, { offset: -61 } );
+  		}else{
+  			$.scrollTo( $('.' + target + '-scroll'), 900, { offset: -61 } );
+  		}
+  	});
 });

@@ -35,17 +35,17 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                       </button>
-                      <a class="navbar-brand" href="#">WP Modern Boilerplate</a>
+                      <a class="navbar-brand home-scroll" href="#">WP Modern Boilerplate</a>
                     </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="active"><a data-scroll="home" href="#">Home</a></li>
+                    <li><a data-scroll="about" href="#">About</a></li>
+                    <li><a data-scroll="services" href="#">Services</a></li>
+                    <li><a data-scroll="portfolio" href="#">Portfolio</a></li>
+                    <li><a data-scroll="contact" href="#">Contact</a></li>
                   </ul>
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->

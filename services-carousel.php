@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="page-header">
-                <h2>What we do?</h2>
+                <h2 class="services-scroll">What we do?</h2>
             </div>
         </div>
         <?php
