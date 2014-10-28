@@ -43,19 +43,25 @@ module.exports = function(grunt) {
             expand: true,
             cwd: 'bower_components/holderjs/',
             src: ['holder.js'],
-            dest: 'js/holderjs/'
+            dest: 'resources/holderjs/'
           },
           {
             expand: true,
             cwd: 'bower_components/jquery.nicescroll/',
             src: ['jquery.nicescroll.js'],
-            dest: 'js/jquery.nicescroll/'
+            dest: 'resources/jquery.nicescroll/'
           },
           {
             expand: true,
             cwd: 'bower_components/owlcarousel/owl-carousel/',
             src: ['*'],
             dest: 'resources/owlcarousel'
+          },
+          {
+            expand: true,
+            cwd: 'bower_components/jquery.scrollTo/',
+            src: ['jquery.scrollTo.js'],
+            dest: 'resources/jquery.scrollTo'
           }
         ]
       },
