@@ -8,13 +8,13 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
         <meta charset="<?php bloginfo( 'charset' ); ?>">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 		<!--[if lt IE 9]>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
-		<![endif]-->        
+		<![endif]-->
 		<?php wp_head(); ?>
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -25,7 +25,7 @@
         <![endif]-->
 
         <header id="header">
-            <nav class="navbar navbar-default" role="navigation">
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
