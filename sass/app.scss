@@ -39,6 +39,35 @@ body.admin-bar {
 	}
 }
 
+// Portfolio
+#portfolio {
+
+	.thumbnail {
+		overflow: hidden;
+		padding: 0;
+
+		img {
+			-webkit-transition: all .5s ease;
+			   -moz-transition: all .5s ease;
+			     -o-transition: all .5s ease;
+				-ms-transition: all .5s ease;
+					transition: all .5s ease;
+			width: 100%;
+		}
+	}
+
+	.thumbnail:hover {
+
+		img {
+			-webkit-transform: scale(1.25);
+			   -moz-transform: scale(1.25);
+			    -ms-transform: scale(1.25);
+			     -o-transform: scale(1.25);
+					transform: scale(1.25);
+		}
+	}
+}
+
 // Footer
 #footer {
 	background-color: #f8f8f8;

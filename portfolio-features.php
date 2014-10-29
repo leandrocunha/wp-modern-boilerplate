@@ -12,7 +12,7 @@
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
             <div class="col-md-3">
                 <div class="thumbnail">
-                    <?php the_post_thumbnail( '250x250' ); ?>
+                    <?php the_post_thumbnail( '250x250', array('class' => 'img-responsive') ); ?>
                 </div>
             </div>
         <?php endwhile; ?>

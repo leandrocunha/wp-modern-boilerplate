@@ -5322,6 +5322,23 @@ body.admin-bar {
     height: 450px;
     width: 100%; }
 
+#portfolio .thumbnail {
+  overflow: hidden;
+  padding: 0; }
+  #portfolio .thumbnail img {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+    width: 100%; }
+#portfolio .thumbnail:hover img {
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  transform: scale(1.25); }
+
 #footer {
   background-color: #f8f8f8;
   border-top: #e7e7e7 1px solid;

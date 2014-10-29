@@ -25,7 +25,7 @@
             </div>
         </div>
 
-        <div class="portfolio">
+        <div id="portfolio">
             <?php get_template_part( 'portfolio', 'features' ); ?>
         </div>
 
