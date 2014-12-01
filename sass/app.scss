@@ -10,12 +10,15 @@
 body {
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 400;
-	padding: 51px 0 0 0;
+	padding: 50px 0 0 0;
 }
 
 // Fix admin bar menu
 body.admin-bar {
-	top: 32px;
+
+	.navbar {
+		top: 32px;
+	}
 }
 
 // Header
