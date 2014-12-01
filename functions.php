@@ -15,6 +15,7 @@
 		wp_enqueue_style( 'owlcarousel_theme', get_template_directory_uri() . '/resources/owlcarousel/owl.theme.css');
 
 		wp_enqueue_script( 'jquery', array(), false, false );
+		wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/resources/bootstrap/bootstrap.js', array(), false, false );
 		wp_enqueue_script( 'holderjs', get_template_directory_uri() . '/resources/holderjs/holder.js', array(), false, false );
 		wp_enqueue_script( 'owlcarousel', get_template_directory_uri() . '/resources/owlcarousel/owl.carousel.js', array(), false, false );
 		wp_enqueue_script( 'jquery.nicescroll', get_template_directory_uri() . '/resources/jquery.nicescroll/jquery.nicescroll.js', array(), false, false );

@@ -24,6 +24,12 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
+            cwd: 'bower_components/bootstrap-sass-official/assets/javascripts/',
+            src: ['bootstrap.js'],
+            dest: 'resources/bootstrap/'
+          },
+          {
+            expand: true,
             cwd: 'bower_components/holderjs/',
             src: ['holder.js'],
             dest: 'resources/holderjs/'
