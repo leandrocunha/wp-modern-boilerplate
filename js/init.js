@@ -1,8 +1,8 @@
 jQuery(document).ready(function($){
 
  	$("html").niceScroll({
-           scrollspeed: 80,
-           mousescrollstep: 50
+           scrollspeed: 200,
+           mousescrollstep: 500
  	});
 
 	$("#owl-carousel").owlCarousel({
