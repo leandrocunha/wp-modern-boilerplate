@@ -2,7 +2,7 @@ jQuery(document).ready(function($){
 
  	$("html").niceScroll({
            scrollspeed: 200,
-           mousescrollstep: 500
+           mousescrollstep: 400
  	});
 
 	$("#owl-carousel").owlCarousel({
