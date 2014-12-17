@@ -1,8 +1,13 @@
 jQuery(document).ready(function($){
 
  	$("html").niceScroll({
-           scrollspeed: 200,
-           mousescrollstep: 400
+           scrollspeed: 45,
+           mousescrollstep: 100,
+           cursoropacitymin: 0.1,
+           cursoropacitymax: 0.7,
+           cursorborder: '1px solid transparent',
+           cursorwidth: 8,
+           railpadding: { top: 3, right: 3, left: 3, bottom: 3 }
  	});
 
 	$("#owl-carousel").owlCarousel({
