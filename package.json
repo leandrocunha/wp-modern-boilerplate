@@ -1,15 +1,16 @@
 {
-	"name": "wp-modern-boilerplate",
-	"version": "2.0.0",
-	"description": "The modern boilerplate to build WordPress themes more powerfull",
-	"repository": "https://github.com/leandrocunha/wp-modern-boilerplate",
-	"author": "Leandro Cunha aka. Frango",
-	"license": "GPL",
-	"dependencies": {
-		"grunt": "*",
-		"grunt-contrib-less": "*",
-		"grunt-contrib-sass": "*",
-		"grunt-contrib-stylus": "*",
-		"grunt-contrib-watch": "*"
-	}
+  "name": "wp-modern-boilerplate",
+  "version": "2.0.0",
+  "description": "The modern boilerplate to build WordPress themes more powerfull",
+  "repository": "https://github.com/leandrocunha/wp-modern-boilerplate",
+  "author": "Leandro Cunha aka. Frango",
+  "license": "GPL",
+  "dependencies": {
+    "grunt": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-stylus": "*",
+    "grunt-contrib-watch": "*",
+    "jeet": "*"
+  }
 }
