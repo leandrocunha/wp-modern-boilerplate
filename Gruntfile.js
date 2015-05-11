@@ -1,71 +1,24 @@
+/* jslint node: true */
+
+'use strict';
+
 module.exports = function(grunt) {
 
-  // Load plugins
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
+	// Project configuration.
+	grunt.initConfig({
 
-  // Project configuration.
-  grunt.initConfig({
+		pkg: grunt.file.readJSON('package.json'),
 
-    pkg: grunt.file.readJSON('package.json'),
-
-    sass: {
-      dist: {
-        files: {
-          'style.css': 'sass/app.sass'
-        }
-      }
-    },
-
-    copy: {
-      main: {
-        files: [
-          {
-            expand: true,
-            cwd: 'bower_components/bootstrap-sass-official/assets/javascripts/',
-            src: ['bootstrap.js'],
-            dest: 'resources/bootstrap/'
-          },
-          {
-            expand: true,
-            cwd: 'bower_components/holderjs/',
-            src: ['holder.js'],
-            dest: 'resources/holderjs/'
-          },
-          {
-            expand: true,
-            cwd: 'bower_components/jquery.nicescroll/',
-            src: ['jquery.nicescroll.js'],
-            dest: 'resources/jquery.nicescroll/'
-          },
-          {
-            expand: true,
-            cwd: 'bower_components/owlcarousel/owl-carousel/',
-            src: ['*'],
-            dest: 'resources/owlcarousel'
-          },
-          {
-            expand: true,
-            cwd: 'bower_components/jquery.scrollTo/',
-            src: ['jquery.scrollTo.js'],
-            dest: 'resources/jquery.scrollTo'
-          }
-        ]
-      },
-    },
-
-    cssmin: {
-      minify: {
-        options: {
-          banner: '/*\n' +
+		stylus: {
+			compile: {
+				options: {
+					banner: '/*\n' +
                   'Theme Name: WP Modern Boilerplate\n' +
                   'Theme URI: https://github.com/leandrocunha/wp-modern-boilerplate\n' +
                   'Author: Leandro Cunha aka. Frango\n' +
                   'Author URI: http://frango.herokuapp.com\n' +
                   'Description: The modern boilerplate to build WordPress themes more powerfull\n' +
-                  'Version: 1.0\n' +
+                  'Version: 2.0\n' +
                   'License: GNU General Public License v2 or later\n' +
                   'License URI: http://www.gnu.org/licenses/gpl-2.0.html\n' +
                   'Tags: gray, blue, white, flat, bootstrap, grunt, bower\n' +
@@ -74,27 +27,27 @@ module.exports = function(grunt) {
                   'This theme, like WordPress, is licensed under the GPL.\n' +
                   'Use it to make something cool, have fun, and share what you\'ve learned with others.\n' +
                   '*/\n',
-        },
+				},
+				files: {
+					'style.css': 'assets/dev/stylus/app.styl'
+				}
+			}
+		},
 
-        files: {
-          'style.css': ['style.css']
-        }
-      }
-    },
+		watch: {
+			scripts: {
+				files: ['assets/dev/stylus/app.styl'],
+				tasks: ['stylus']
+			}
+		}
 
-    watch: {
-      scripts: {
-        files: ['sass/*.sass', 'sass/*.scss', 'sass/**/*.sass', 'sass/**/*.scss', 'fonts/*.scss', 'js/*.js'],
-        tasks: ['sass', 'cssmin'],
-        options: {
-          livereload: true
-        }
-      },
-    }
+	});
 
-  });
+	// Load the plugin that provides the "uglify" task.
+	grunt.loadNpmTasks('grunt-contrib-stylus');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
-  // Default task(s).
-  grunt.registerTask('default', ['sass', 'copy', 'cssmin', 'watch']);
+	// Default task(s).
+	grunt.registerTask('default', ['stylus', 'watch']);
 
 };
