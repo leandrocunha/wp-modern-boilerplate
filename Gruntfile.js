@@ -27,6 +27,12 @@ module.exports = function(grunt) {
                   'This theme, like WordPress, is licensed under the GPL.\n' +
                   'Use it to make something cool, have fun, and share what you\'ve learned with others.\n' +
                   '*/\n',
+					paths: [
+						'./node_modules/jeet/stylus'
+					],
+					import: [
+						'jeet'
+					]
 				},
 				files: {
 					'style.css': 'assets/dev/stylus/app.styl'

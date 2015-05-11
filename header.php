@@ -21,11 +21,11 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     </head>
     <body <?php body_class(); ?>>
-        <!--[if lt IE 7]>
+        <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <header id="header">
+        <header id="h">
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
