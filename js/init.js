@@ -1,3 +1,5 @@
+/* @flow */
+
 jQuery(document).ready(function($){
 
  	$("html").niceScroll({

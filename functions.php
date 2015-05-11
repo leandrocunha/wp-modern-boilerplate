@@ -20,12 +20,13 @@
 		wp_enqueue_script( 'jquery.nicescroll', get_template_directory_uri() . '/resources/jquery.nicescroll/jquery.nicescroll.js', array(), false, false );
 		wp_enqueue_script( 'fillbox', get_template_directory_uri() . '/resources/fillbox/fillbox.js', array(), false, false );
 		wp_enqueue_script( 'scrollTo', get_template_directory_uri() . '/resources/jquery.scrollTo/jquery.scrollTo.js', array(), false, false );
+		wp_enqueue_script( 'threejs', 'http://threejs.org/build/three.min.js', array(), false, false);
 		wp_enqueue_script( 'theme_init', get_template_directory_uri() . '/js/init.js', array(), false, false );
 	}
 
 	add_action( 'wp_enqueue_scripts', 'wp_modern_boilerplate_assets' );
 
-	
+
 	// Custom page title
 	function wp_modern_boilerplate_wp_title( $title ){
 		global $page, $paged;
