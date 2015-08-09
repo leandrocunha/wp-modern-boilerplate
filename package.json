@@ -7,8 +7,6 @@
   "license": "GPL",
   "dependencies": {
     "grunt": "*",
-    "grunt-contrib-less": "*",
-    "grunt-contrib-sass": "*",
     "grunt-contrib-stylus": "*",
     "grunt-contrib-watch": "*",
     "jeet": "*"
