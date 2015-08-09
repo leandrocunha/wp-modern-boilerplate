@@ -9,6 +9,8 @@
     "grunt": "*",
     "grunt-contrib-stylus": "*",
     "grunt-contrib-watch": "*",
-    "jeet": "*"
+    "nib": "*",
+    "jeet": "*",
+    "responsa" "*"
   }
 }
